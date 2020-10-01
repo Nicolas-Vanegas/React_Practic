@@ -1,5 +1,4 @@
-/* npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev(Esto es porque solo lo vamos a utilizar para nuestro entorno de desarrollo). Este comando nos sirve para inicializar babel Con esto instalamos babelCore el cual incluye todas las herramientas para instalar a código moderno, babel Loader que se encarga de trabajar con Webpack, y los preset que nos ayuda a enterder y transformar nuestro código js y react*/
-
+/* npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev(Esto es porque sólo lo vamos a utilizar para nuestro entorno de desarrollo). Este comando nos sirve para inicializar babel Con esto instalamos babelCore el cual incluye todas las herramientas para instalar a código moderno, babel Loader que se encarga de trabajar con Webpack, y los preset que nos ayuda a enterder y transformar nuestro código js y react*/
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
