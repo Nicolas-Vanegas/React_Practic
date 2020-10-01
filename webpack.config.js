@@ -2,23 +2,23 @@
 //Instalación de Webpack: npm i webpack webpack-cli html-webpack-plugin html-loader --save-dev
 
 // path es un módulo de node
-const path = require("path");
+const path = require('path');
 //Instanciar el plugin que instalé
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 //creamos un nuevo módulo que vamos a exportar con la configuración
 //el resolve que nos va a permite detectar el directorio en donde estamos y le pasamos de segundo parámetro un directorio en el cuál vamos a guardar los archivos.
 //test con esa expreg es para identificar los archivos de js y jsx y el otro test para identificar archivos html
 //Dentro de los loader tienen que haber loaders previamente instalados en el test de css con esa expreg identifica los archivos css o scss(sass)
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -26,14 +26,14 @@ module.exports = {
         test: /.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           },
         ],
       },
@@ -43,19 +43,19 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          "css-loader",
-          "sass-loader",
+          'css-loader',
+          'sass-loader',
         ],
       },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html",
+      template: './public/index.html',
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: "assets/[name].css",
+      filename: 'assets/[name].css',
     }),
   ],
 };

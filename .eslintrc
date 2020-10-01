@@ -1,6 +1,6 @@
 // 20201001152817
 // https://gist.githubusercontent.com/gndx/60ae8b1807263e3a55f790ed17c4c57a/raw/0de495fc84df71ce97ef87c37505362f3512e1c3/eslintrc
-//En este archivo creamos un entorno el cuales para que eslint revise documentos con ciertas reglas de escritura, accesibilidad y un poco de mondas.
+//En este archivo creamos un entorno el cuales para que eslint revise documentos con ciertas reglas de escritura, accesibilidad y un poco de mondas. ESTO ESTÁ EN LOS GIST DE OSCAR BARAJAS.
 
 {
   "env": {
