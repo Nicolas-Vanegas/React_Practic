@@ -7,3 +7,8 @@ body {
 * {
   box-sizing: border-box;
 }
+// Quitarle las barras de scroll a los carousels
+::-webkit-scrollbar {
+  display: none;
+}
+/*  */
