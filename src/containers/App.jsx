@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Search from '../components/Search';
 import Categories from '../components/Categories';
@@ -9,6 +9,17 @@ import Footer from '../components/Footer';
 import '../assets/styles/App.scss';
 
 const App = () => {
+  const [videos, setVideos] = useState([]);
+
+  //useEffect el cual me va a permitir ir a la fake API a traer nuestra información para entonces pasarsela a setVideos la cual actualiza la información de la variable videos. Explicación: Hacemos el llamado, transformamos a json y luego la mandamos al state
+  useEffect(() => {
+    fetch('http://localhost:3000/initalState')
+      .then((response) => response.json())
+      .then((data) => setVideos(data));
+  }, []);
+
+  console.log(videos);
+
   return (
     <div className='App'>
       <Header />
