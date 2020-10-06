@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import '../assets/styles/components/CarouselItem.scss';
 import playIcon from '../assets/images/play-icon.png';
 import plusIcon from '../assets/images/plus-icon.png';
@@ -18,5 +18,14 @@ const CarouselItem = ({ title, year, contentRating, duration, cover }) => (
     </div>
   </div>
 );
+
+//Debemos instalar prop-types primero e importarlo, Nos sirve para definir el tipo de dato de los props. tienes que pasar el nombre "propTypes con la p en minúscula"
+CarouselItem.propTypes = {
+  title: PropTypes.string,
+  year: PropTypes.number,
+  contentRating: PropTypes.string,
+  duration: PropTypes.number,
+  cover: PropTypes.string,
+};
 
 export default CarouselItem;
